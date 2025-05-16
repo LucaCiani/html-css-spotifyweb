@@ -1,0 +1,35 @@
+@media screen and (min-width:576px) {
+    aside{
+        width: 230px;
+    }
+
+    aside .logo-small{
+        display: none;
+    }
+
+    aside .logo{
+        display: block;
+        padding-bottom: 20px;
+        width: 70%;
+    }
+
+    aside .aside-border{
+        display: inline;
+    }
+
+    aside .aside-border-2{
+        display: block;
+        width: 100%;
+        border-top: 1px solid gray;
+    }
+
+    aside .sidebar-body{
+        display: inline;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    main{
+        width: calc(100% - 230px);
+    }
+}
