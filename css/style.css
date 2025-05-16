@@ -3,3 +3,100 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper{
+    height: 100vh;
+    overflow: hidden;
+}
+
+.top{
+    height: calc(100% - 80px);
+    width: 100vw;
+    display: flex;
+}
+
+aside{
+    width: 50px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main{
+    background-color: #141922;
+    color: white;
+    overflow-y: auto;
+}
+
+
+
+.content{
+    padding: 20px;
+}
+
+nav > ul{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    color: gray;
+    padding: 20px 0;
+}
+
+.border{
+    margin: 0 30px;
+    border: 1px solid lime;
+}
+
+.row-title{
+    padding: 20px 0;
+}
+
+.row-comment{
+    color: gray;
+}
+
+.row{
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(100% / 12 * 1);
+}
+
+.col{
+    width: calc(100% / 12 * 5.5);
+}
+
+.card-img{
+    max-width: 100%;
+}
+
+.card-body{
+    max-height: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.card-comment{
+    color: gray;
+    font-size: 0.8rem;
+    line-height: 3rem;
+}
+
+
+
+
+
+
+footer{
+    height: 80px;
+    min-width: 100%;
+    background-color: #282828;
+}
