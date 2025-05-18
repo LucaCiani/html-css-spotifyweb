@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify Web</title>
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/media.css">
 </head>
@@ -20,40 +21,58 @@
                     <div>
                         <ul>
                             <li>
-                                <div class="aside-border"></div>
                                 <img src="./img/home.svg" alt="home">
-                                <h5 class="sidebar-body">Home</h5>
+                                <span class="sidebar-text">Home</span>
                             </li>
                             <li>
                                 <img src="./img/search.svg" alt="search">
-                                <span class="sidebar-body">Cerca</span>
+                                <span class="sidebar-text">Cerca</span>
                             </li>
                             <li>
                                 <img src="./img/libreria.svg" alt="libreria">
-                                <span class="sidebar-body">La tua libreria</span>
+                                <span class="sidebar-text">La tua libreria</span>
                             </li>
                         </ul>
                     </div>
-                    <div>
-
+                    <div class="playlist-box">
+                        <h4>PLAYLIST</h4>
+                        <div class="add-playlist">
+                            <i class="fa-solid fa-plus"></i>
+                            <span>Crea Playlist</span>
+                        </div>
+                        <ul>
+                            <li>
+                                Nome Playlist
+                            </li>
+                            <li>
+                                Nome Playlist
+                            </li>
+                            <li>
+                                Nome Playlist
+                            </li>
+                            <li>
+                                Nome Playlist
+                            </li>
+                            <li>
+                                Nome Playlist
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div>
-                    <ul>
-                        <li>
-                            <img src="./img/download.svg" alt="download">
-                            <span class="sidebar-body">Installa app</span>
-                        </li>
-                        <li>
-                            <div class="aside-border-2"></div>
-                        </li>
-                        <li>
-                            <img src="./img/profile.svg" alt="profile">
-                            <h5 class="sidebar-body">Luca Ciani</h5>
-                        </li>
-                    </ul>
+                    <div>
+                        <img src="./img/download.svg" alt="download">
+                        <span class="sidebar-text">Installa app</span>
+                    </div>
+                    <div class="aside-border"></div>
+                    <div>
+                        <img class="profile-img" src="./img/profile.svg" alt="profile">
+                        <h5 class="sidebar-text">Luca Ciani</h5>
+                    </div>
                 </div>
             </aside>
+
+
             <main>
                 <div class="upgrade">
                     <button class="upgrade-button" type="button">EFFETTUA L'UPGRADE</button>
@@ -65,11 +84,26 @@
                                 IN EVIDENZA
                                 <div class="border"></div>
                             </li>
-                            <li>PODCAST</li>
-                            <li>CLASSIFICHE</li>
-                            <li>GENERI E MOOD</li>
-                            <li>NUOVE USCITE</li>
-                            <li>SCOPRI</li>
+                            <li>
+                                PODCAST
+                                <div class="border"></div>
+                            </li>
+                            <li>
+                                CLASSIFICHE
+                                <div class="border"></div>
+                            </li>
+                            <li>
+                                GENERI E MOOD
+                                <div class="border"></div>
+                            </li>
+                            <li>
+                                NUOVE USCITE
+                                <div class="border"></div>
+                            </li>
+                            <li>
+                                SCOPRI
+                                <div class="border"></div>
+                            </li>
                         </ul>
                     </nav>
                     <h2 class="row-title">Recently played</h2>
@@ -172,10 +206,50 @@
                 </div>        
             </main>
         </div>
+
+
         <footer>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div class="song-info">
+                <img class="footer-img" src="./img/sinister.jpeg" alt="sinister">
+                <div>
+                    <h4>Sinister</h4>
+                    <span>Brano nome</span>
+                </div>
+                <div>
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-folder"></i>
+                </div>
+            </div>
+            <div class="media-player">
+                <div class="media-player-buttons">
+                    <i class="fa-solid fa-shuffle"></i>
+                    <i class="fa-solid fa-backward-step"></i>
+                    <i class="fa-regular fa-circle-play"></i>
+                    <i class="fa-solid fa-forward-step"></i>
+                    <i class="fa-solid fa-rotate-right"></i>
+                </div>
+                <div class="song-progress">
+                    <div class="time-stamps">
+                        <span>0:25</span>
+                        <span>4:25</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-utility">
+                    <i class="fa-solid fa-list"></i>
+                    <i class="fa-solid fa-display"></i>
+                    <i class="fa-solid fa-volume-high"></i>
+                </div>
+                <div class="volume-container">
+                    <div class="volume-bar">
+                        <div class="volume"></div>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
 </body>

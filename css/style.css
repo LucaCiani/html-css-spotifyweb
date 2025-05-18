@@ -19,6 +19,8 @@ body{
     display: flex;
 }
 
+/* SIDEBAR ZONE */
+
 aside{
     width: 50px;
     background-color: black;
@@ -29,6 +31,7 @@ aside{
 
     img{
         width: 30px;
+        vertical-align: middle;
     }
 
     .logo-small{
@@ -39,17 +42,7 @@ aside{
         display: none;
     }
 
-    .aside-border{
-        display: none;
-        width: 0;
-        position: absolute;
-        top: 67px;
-        left: 1px;
-        border: 1px solid lime;
-        height: 35px;
-    }
-
-    .sidebar-body{
+    .sidebar-text{
         display: none;
     }
 
@@ -58,15 +51,52 @@ aside{
         line-height: 2rem;
     }
 
-    h5{
-        font-size: 1rem;
-        color: white;
+    li{
+        vertical-align: middle;
     }
 
-    .aside-border-2{
+    h5{
+        font-size: 1rem;
+        color: white !important; 
+    }
+
+    .aside-border{
         display: none;
     }
 }
+
+.playlist-box{
+    display: none;
+    color: gray;
+    padding: 30px 0;
+
+    h4{
+        color: white;
+    }
+
+    .add-playlist{
+        padding: 15px 0;
+    }
+
+    .fa-plus{
+        color: black;
+        background-color: gray;
+        font-size: 2rem;
+        padding: 10px;
+        vertical-align: middle;
+    }
+
+    ul{
+        line-height: 2.5rem;
+    }
+}
+
+.profile-img{
+    background-color: gray;
+    border-radius: 50%;
+}
+
+/* MAIN ZONE */
 
 main{
     background-color: #141922;
@@ -95,7 +125,7 @@ main{
 }
 
 .content{
-    padding: 60px 20px;
+    padding: 20px 20px;
 }
 
 nav > ul{
@@ -108,9 +138,19 @@ nav > ul{
     padding: 20px 0;
 }
 
+nav li:hover{
+    color: white;
+    cursor: pointer;
+}
+
 .border{
-    margin: 0 30px;
-    border: 1px solid lime;
+    width: 30px;
+    margin: 3px auto;
+    border: 1px solid transparent;
+}
+
+li:hover .border{
+    border-color: lime;
 }
 
 .row-title{
@@ -156,10 +196,159 @@ nav > ul{
 
 
 
-
+/* FOOTER ZONE */
 
 footer{
     height: 80px;
     min-width: 100%;
+    padding: 5px;
     background-color: #282828;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+
+    span{
+        color: gray;
+    }
+}
+
+.song-info{
+    display: flex;
+    align-items: center;
+
+    .fa-regular{
+        display: block;
+        color: gray;
+        padding-left: 10px;
+        line-height: 1.2rem;
+    }
+}
+
+.footer-img{
+    height: 60%;
+    padding-right: 10px;
+}
+
+.media-player-buttons{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+
+    .fa-solid{
+        font-size: 1.3rem;
+    }
+
+    .fa-regular{
+        font-size: 1.7rem;
+    }
+}
+
+.media-player{
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.song-progress{
+    width: 100%;
+    max-width: 600px;
+}
+
+.time-stamps {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    margin-bottom: 4px;
+}
+
+.progress-bar {
+    position: relative;
+    height: 4px;
+    background-color: #535353;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.progress {
+    height: 100%;
+    width: 30%;
+    background-color: white;
+    border-radius: 2px;
+    position: relative;
+}
+
+.progress::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    display: none;
+}
+
+.progress-bar:hover .progress{
+    background-color: lime;
+}
+
+.progress-bar:hover .progress::after{
+    display: block;
+}
+
+.footer-right{
+    display: flex;
+    align-items: center;
+}
+
+.footer-utility{
+    display: flex;
+    gap: 10px;
+}
+
+.volume-container{
+    width: 100px;
+    padding-left: 10px;
+}
+
+.volume-bar{
+    position: relative;
+    height: 4px;
+    background-color: #535353;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.volume{
+    height: 100%;
+    width: 30%;
+    background-color: white;
+    border-radius: 2px;
+    position: relative;
+}
+
+.volume::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    display: none;
+}
+
+.volume-bar:hover .volume{
+    background-color: lime;
+}
+
+.volume-bar:hover .volume::after{
+    display: block;
 }

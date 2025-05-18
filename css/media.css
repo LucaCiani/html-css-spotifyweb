@@ -17,16 +17,21 @@
         display: inline;
     }
 
-    aside .aside-border-2{
+    aside .aside-border{
         display: block;
         width: 100%;
         border-top: 1px solid gray;
+        margin: 10px 0;
     }
 
-    aside .sidebar-body{
+    aside .sidebar-text{
         display: inline;
+        color: gray;
         margin-bottom: 10px;
-        text-align: center;
+    }
+
+    aside .playlist-box{
+        display: block;
     }
     
     main{
