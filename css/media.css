@@ -37,4 +37,21 @@
     main{
         width: calc(100% - 230px);
     }
+
+    .song-info .footer-img{
+        height: 80%;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .col{
+        width: calc(100% / 12 * 3);
+    }
+}
+
+@media screen and (min-width:992px) {
+    .col{
+        width: calc(100% / 12 * 2);
+        
+    }
 }
