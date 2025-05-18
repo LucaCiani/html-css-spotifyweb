@@ -47,11 +47,19 @@
     .col{
         width: calc(100% / 12 * 3);
     }
+
+    .song-info .favourites{
+        flex-direction: row;
+    }
 }
 
 @media screen and (min-width:992px) {
     .col{
         width: calc(100% / 12 * 2);
         
+    }
+
+    .song-info .footer-img{
+        height: 100%;
     }
 }
