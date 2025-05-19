@@ -71,9 +71,8 @@ aside{
         margin: 10px 0;
     }
 
-    li:hover{
+    li:first-child{
         border-left: 2px solid lime;
-        padding-left: 10px;
     }
 
     li:hover .sidebar-text{
@@ -112,7 +111,7 @@ aside{
 
     ul{
         line-height: 2.5rem;
-        max-height: 300px;
+        max-height: 250px;
         overflow-y: auto;
     }
 
@@ -185,11 +184,7 @@ nav li:hover{
 .border{
     width: 30px;
     margin: 3px auto;
-    border: 1px solid transparent;
-}
-
-li:hover .border{
-    border-color: lime;
+    border: 1px solid lime;
 }
 
 .row-title{
