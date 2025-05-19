@@ -28,6 +28,7 @@ aside{
     flex-direction: column;
     justify-content: space-between;
     padding: 5px 10px;
+    overflow-y: hidden;
 
     img{
         width: 30px;
@@ -65,6 +66,21 @@ aside{
     }
 }
 
+.pages{
+    li{
+        margin: 10px 0;
+    }
+
+    li:hover{
+        border-left: 2px solid lime;
+        padding-left: 10px;
+    }
+
+    li:hover .sidebar-text{
+        color: white;
+    }
+}
+
 .playlist-box{
     display: none;
     color: gray;
@@ -78,6 +94,14 @@ aside{
         padding: 15px 0;
     }
 
+    .add-playlist:hover .fa-plus{
+        background-color: white;
+    }
+
+    .add-playlist:hover span{
+        color: white;
+    }
+
     .fa-plus{
         color: black;
         background-color: gray;
@@ -89,11 +113,19 @@ aside{
     ul{
         line-height: 2.5rem;
     }
+
+    li:hover{
+        color: white;
+    }
 }
 
 .profile-img{
     background-color: gray;
     border-radius: 50%;
+}
+
+.sidebar-text:hover{
+    color: white;
 }
 
 /* MAIN ZONE */
@@ -122,6 +154,11 @@ main{
     padding: 10px 20px;
     margin: 15px 0;
     border-radius: 20px;
+    transition: transform .3s;
+}
+
+.upgrade-button:hover{
+    transform: scale(1.1);
 }
 
 .content{
@@ -193,7 +230,32 @@ li:hover .border{
     line-height: 1rem;
 }
 
+.card .fa-circle-play{
+    display: none;
+}
 
+.card:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.card:hover .card-hover img {
+  opacity: 0.4;
+}
+
+.card-hover {
+  position: relative;
+}
+
+.card:hover .fa-circle-play {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: white;
+}
 
 
 /* FOOTER ZONE */
@@ -206,9 +268,6 @@ footer{
     display: flex;
     justify-content: space-between;
     color: white;
-    position: sticky;
-    bottom: 0;
-    z-index: 1000;
 
     span{
         color: gray;
@@ -223,6 +282,11 @@ footer{
     span{
         font-size: 0.8rem;
     }
+
+    span:hover{
+        color: white;
+        text-decoration: underline;
+    }
 }
 
 .favourites{
@@ -232,6 +296,10 @@ footer{
     justify-content: center;
     padding-left: 10px;
     gap: 5px;
+
+    .fa-regular:hover{
+        color: white;
+    }
 }
 
 .footer-img{
@@ -248,14 +316,19 @@ footer{
     .fa-solid{
         font-size: 1.3rem;
     }
-
+    
     .fa-regular{
         font-size: 1.7rem;
+        transition: transform .3s;
+    }
+
+    .fa-regular:hover{
+        transform: scale(1.1);
     }
 }
 
 .media-player{
-    width: 100%;
+    width: 50%;
     padding: 0 10px;
     display: flex;
     flex-direction: column;
@@ -266,6 +339,10 @@ footer{
 .song-progress{
     width: 100%;
     max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
 }
 
 .time-stamps {
@@ -276,6 +353,7 @@ footer{
 }
 
 .progress-bar {
+    width: 100%;
     position: relative;
     height: 4px;
     background-color: #535353;
